@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="#E0E0E1">
+
+        <ImageView
+            android:id="@+id/rockGestureImage"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:src="@drawable/hand_grey"
+            app:layout_constraintBottom_toBottomOf="@+id/flamencoGestureImage"
+            app:layout_constraintEnd_toStartOf="@id/flamencoGestureImage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/flamencoGestureImage" />
+
+        <ImageView
+            android:id="@+id/flamencoGestureImage"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:src="@drawable/hand_grey3"
+            app:layout_constraintBottom_toTopOf="@+id/connectToDeviceButton"
+            app:layout_constraintStart_toEndOf="@+id/rockGestureImage"
+            app:layout_constraintEnd_toStartOf="@id/classicalHandGesture"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/classicalHandGesture"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:src="@drawable/hand_grey2"
+            app:layout_constraintBottom_toBottomOf="@+id/flamencoGestureImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/flamencoGestureImage"
+            app:layout_constraintTop_toTopOf="@id/flamencoGestureImage" />
+
+        <Button
+            android:id="@+id/connectToDeviceButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Connect my device"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="60dp"
+            android:backgroundTint="#FFFFFF"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="#606060"
+            android:textSize="25dp"
+            app:layout_constraintTop_toBottomOf="@id/flamencoGestureImage" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
